@@ -18,9 +18,9 @@ fi
 
 
 # Unzip the zip files into their respective name folders
-unzip -n cache.zip -d cache
-unzip -n faiss_index.zip -d faiss_index
-unzip -n data.zip -d data
+unzip -n cache.zip
+unzip -n faiss_index.zip
+unzip -n data.zip
 
 # Delete the zip files
 rm cache.zip
