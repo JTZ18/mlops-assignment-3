@@ -6,14 +6,21 @@ faiss_index_url="https://storage.googleapis.com/mlops3/faiss_index.zip"
 data_url="https://storage.googleapis.com/mlops3/data.zip"
 
 # Download the zip files
-wget $cache_url
-wget $faiss_index_url
-wget $data_url
+if [ ! -f /cache.zip ]; then
+    wget $cache_url
+fi
+if [ ! -f /faiss_index.zip ]; then
+    wget $faiss_index_url
+fi
+if [ ! -f /data.zip ]; then
+    wget $data_url
+fi
+
 
 # Unzip the zip files into their respective name folders
-unzip cache.zip -d cache
-unzip faiss_index.zip -d faiss_index
-unzip data.zip -d data
+unzip -n cache.zip -d cache
+unzip -n faiss_index.zip -d faiss_index
+unzip -n data.zip -d data
 
 # Delete the zip files
 rm cache.zip
