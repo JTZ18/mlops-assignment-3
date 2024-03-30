@@ -1,0 +1,9 @@
+cache.zip
+faiss_index.zip
+faiss_index
+data.zip
+data
+cache
+venv
+venv-wsl
+__pycache__/
