@@ -2,9 +2,15 @@
 
 This repository contains the code for SUTD 50.055 MLOps Assignment 3.
 
+The repository contains the following directories -
+- `SUTD-crawler` contains code to run the scrapy web crawler
+- `crawled_links` contain crawled links - full and cleaned links
+- `evaluation` contains our evaluation of the LLM responses from `assignment_03-Part1.ipynb` and `assignment_03-Part2.ipynb`
+- `responses` contains LLM generated responses from `assignment_03-Part1.ipynb` and `assignment_03-Part2.ipynb`
+
 ## Setup
 
-To set up the project, you need to run the `setup.sh` script. This script will download the necessary `data`, `faiss_index`, and `cache` folders for you and place them into the repository. This will speed up your workflow as you would not have to chunk and embed the data which is time consuming on the edu cluster.
+To set up the project, you need to run the `setup.sh` script. This script will download the necessary `data`, `faiss_index`, and `cache` directories for you and place them into the repository. This will speed up your workflow as you would not have to chunk and embed the data which is time consuming on the edu cluster.
 
 To run the script, open a terminal in the repository directory and type:
 
@@ -12,7 +18,7 @@ To run the script, open a terminal in the repository directory and type:
 ./setup.sh
 ```
 
-This will start the download and extraction process. Once the script finishes running, you should see the data, faiss_index, and cache folders in your repository directory.
+This will start the download and extraction process. Once the script finishes running, you should see the data, faiss_index, and cache directories in your repository directory.
 
 ## Usage
 This assignment is divided into two parts: `assignment_03-Part1.ipynb` and `assignment_03-Part2.ipynb`.
@@ -26,7 +32,7 @@ The first part of the assignment `assignment_03-Part1.ipynb` contains all our an
 The second part of the assignment `assignment_03-Part2.ipynb` contains our solution to trying different methods to improve the quality of RAG answers. Here's what we did:
 
 1. **Web Scraping**: We scraped all related links to `https://www.sutd.edu.sg`. This gave us a total of 7036 links, which can be found in the file `crawled_links/sutd_full_url.txt`.
-    - We used the following packages to perform our web crawling `scrapy` and `extruct`. The code for the crawler can be found in the `SUTD-crawler` folder.
+    - We used the following packages to perform our web crawling `scrapy` and `extruct`. The code for the crawler can be found in the `SUTD-crawler` directory.
     - We used the following command inside `SUTD-crawler` -
         ```
         pip install -r requirements-scrapy.txt
